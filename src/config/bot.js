@@ -38,6 +38,15 @@ export default {
 
     repeatAfterMessages: 5,
   },
+
+  // =========================
+  // OTHER SETTINGS (Line 48 Fix)
+  // =========================
+  maxOptions: 10, 
+};      "📌 Please follow the server rules and enjoy your stay!",
+
+    repeatAfterMessages: 5,
+  },
 };
 // =========================
 // POLL SYSTEM
