@@ -1,40 +1,44 @@
 // =========================
-// AUTO REACTION SETTINGS
+// CONFIGURATION EXPORT
 // =========================
-autoReactions: {
-  enabled: true,
+export default {
+  // =========================
+  // AUTO REACTION SETTINGS
+  // =========================
+  autoReactions: {
+    enabled: true,
 
-  triggers: {
-    upi: "💸",
-    ip: "🌐",
-    ping: "🏓",
-    help: "👀",
+    triggers: {
+      upi: "💸",
+      ip: "🌐",
+      ping: "🏓",
+      help: "👀",
+    },
   },
-},
 
-// =========================
-// KING MENTION REACTION
-// =========================
-kingReaction: {
-  enabled: true,
+  // =========================
+  // KING MENTION REACTION
+  // =========================
+  kingReaction: {
+    enabled: true,
 
-  userId: "YOUR_USER_ID",
+    userId: "YOUR_USER_ID",
 
-  emoji: "👑",
-},
+    emoji: "👑",
+  },
 
-// =========================
-// STICKY MESSAGE SYSTEM
-// =========================
-stickyMessages: {
-  enabled: true,
+  // =========================
+  // STICKY MESSAGE SYSTEM
+  // =========================
+  stickyMessages: {
+    enabled: true,
 
-  defaultMessage:
-    "📌 Please follow the server rules and enjoy your stay!",
+    defaultMessage:
+      "📌 Please follow the server rules and enjoy your stay!",
 
-  repeatAfterMessages: 5,
-},
-
+    repeatAfterMessages: 5,
+  },
+};
 // =========================
 // POLL SYSTEM
 // =========================
