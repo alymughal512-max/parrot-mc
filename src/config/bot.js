@@ -1,90 +1,80 @@
-import { logger } from '../utils/logger.js';
+// =========================
+// AUTO REACTION SETTINGS
+// =========================
+autoReactions: {
+  enabled: true,
 
-
-export const botConfig = {
-  // =========================
-  // BOT PRESENCE (what users see under the bot name)
-  // =========================
-  // `status` options:
-  // - "online"    = green dot
-  // - "idle"      = yellow moon
-  // - "dnd"       = red do-not-disturb
-  // - "invisible" = appears offline
-  presence: {
-    // Current online state shown on Discord.
-    status: "dnd",
-
-    // Activity lines shown under the bot name.
-    // `type` number mapping from Discord:
-    // 0 = Playing
-    // 1 = Streaming
-    // 2 = Listening
-    // 3 = Watching
-    // 4 = Custom
-    // 5 = Competing
-    activities: [
-      {
-        // Text users will see (example: "Playing /help | Titan Bot").
-        name: "listining to parrot mc",
-        // Activity type number (0 = Playing).
-        type: 0, 
-      },
-    ],
+  triggers: {
+    upi: "💸",
+    ip: "🌐",
+    ping: "🏓",
+    help: "👀",
   },
+},
 
-  // =========================
-  // COMMAND BEHAVIOR
-  // =========================
-  commands: {
-    // Bot owner user IDs (comma-separated in OWNER_IDS env var).
-    // Owners can access owner/admin-level bot commands.
-    owners: process.env.OWNER_IDS?.split(",") || [],
+// =========================
+// KING MENTION REACTION
+// =========================
+kingReaction: {
+  enabled: true,
 
-    // Default wait time between command uses (in seconds).
-    defaultCooldown: 3, 
+  // PUT YOUR USER ID HERE
+  userId: "YOUR_USER_ID",
 
-    // If true, old commands are removed before re-registering.
-    deleteCommands: false,
+  // CUSTOM EMOJI
+  emoji: "👑",
+},
 
-    // Optional server ID used for testing slash commands quickly.
-    testGuildId: process.env.TEST_GUILD_ID,
-  },
+// =========================
+// STICKY MESSAGE SYSTEM
+// =========================
+stickyMessages: {
+  enabled: true,
 
-  // =========================
-  // APPLICATIONS SYSTEM
-  // =========================
-  applications: {
-    // Default questions shown when someone fills out an application.
-    defaultQuestions: [
-      { question: "What is your name?", required: true },
-      { question: "How old are you?", required: true },
-      { question: "Why do you want to join?", required: true },
-    ],
+  defaultMessage:
+    "📌 Please follow the server rules and enjoy your stay!",
 
-    // Embed colors by application status.
-    statusColors: {
-      pending: "#FFA500",
-      approved: "#00FF00",
-      denied: "#FF0000",
-    },
+  repeatAfterMessages: 5,
+},
 
-    // How long users must wait before submitting another application (hours).
-    applicationCooldown: 24, 
+// =========================
+// POLL SYSTEM
+// =========================
+polls: {
+  enabled: true,
 
-    // Auto-delete denied applications after this many days.
-    deleteDeniedAfter: 7, 
+  maxOptions: 10,
+},
 
-    // Auto-delete approved applications after this many days.
-    deleteApprovedAfter: 30, 
+// =========================
+// ANNOUNCEMENT SYSTEM
+// =========================
+announcements: {
+  enabled: true,
 
-    // Role IDs allowed to manage applications.
-    managerRoles: [], // Will be populated from environment or database
-  },
+  embedColor: "#5865F2",
+},
 
-  // =========================
-  // EMBED COLORS & BRANDING
-  // =========================
-  // IMPORTANT: This is the SINGLE SOURCE OF TRUTH for all bot colors
+// =========================
+// INVITE TRACKER
+// =========================
+inviteTracker: {
+  enabled: true,
+
+  fakeInviteProtection: true,
+
+  inviterRewardCoins: 100,
+},
+
+// =========================
+// DM WELCOME SYSTEM
+// =========================
+dmWelcome: {
+  enabled: true,
+
+  message:
+    "👋 Welcome to {server}! Please read the rules and enjoy your stay.",
+},  // IMPORTANT: This is the SINGLE SOURCE OF TRUTH for all bot colors
   embeds: {
     colors: {
       // Main brand colors.
