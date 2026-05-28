@@ -1,21 +1,7 @@
-import { 
-  Client, 
-  GatewayIntentBits, 
-  EmbedBuilder, 
-  SlashCommandBuilder, 
-  ActionRowBuilder, 
-  StringSelectMenuBuilder, 
-  StringSelectMenuOptionBuilder, 
-  ButtonBuilder, 
-  ButtonStyle, 
-  PermissionFlagsBits, 
-  ChannelType 
-} from 'discord.js';
-
 // ==========================================
-// 1. CONFIGURATION BLOCK
+// STANDARD CONFIGURATION EXPORT
 // ==========================================
-const config = {
+export const botConfig = {
   autoReactions: {
     enabled: true,
     triggers: {
@@ -35,6 +21,18 @@ const config = {
     defaultMessage: "📌 Please follow the server rules and enjoy your stay!",
     repeatAfterMessages: 5,
   },
+  channels: {
+    welcome: "WELCOME_CHANNEL_ID_HERE",  // <-- Welcome channel ki ID daalein
+    logs: "LOGS_CHANNEL_ID_HERE",        // <-- Server Logs channel ki ID daalein
+    ticketCategory: "CATEGORY_ID_HERE",  // <-- Jis category ke andar tickets khulein
+  },
+  roles: {
+    verified: "VERIFIED_ROLE_ID_HERE",    // <-- Verified role ki ID
+    staff: "STAFF_ROLE_ID_HERE",          // <-- Staff/Admin role ki ID
+  }
+};
+
+export default botConfig;  },
   channels: {
     welcome: "WELCOME_CHANNEL_ID_HERE",  // <-- Welcome channel ki ID daalein
     logs: "LOGS_CHANNEL_ID_HERE",        // <-- Server Logs channel ki ID daalein
