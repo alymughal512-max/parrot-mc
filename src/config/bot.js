@@ -18,10 +18,8 @@ autoReactions: {
 kingReaction: {
   enabled: true,
 
-  // PUT YOUR USER ID HERE
   userId: "YOUR_USER_ID",
 
-  // CUSTOM EMOJI
   emoji: "👑",
 },
 
@@ -35,6 +33,46 @@ stickyMessages: {
     "📌 Please follow the server rules and enjoy your stay!",
 
   repeatAfterMessages: 5,
+},
+
+// =========================
+// POLL SYSTEM
+// =========================
+polls: {
+  enabled: true,
+
+  maxOptions: 10,
+},
+
+// =========================
+// ANNOUNCEMENT SYSTEM
+// =========================
+announcements: {
+  enabled: true,
+
+  embedColor: "#5865F2",
+},
+
+// =========================
+// INVITE TRACKER
+// =========================
+inviteTracker: {
+  enabled: true,
+
+  fakeInviteProtection: true,
+
+  inviterRewardCoins: 100,
+},
+
+// =========================
+// DM WELCOME SYSTEM
+// =========================
+dmWelcome: {
+  enabled: true,
+
+  message:
+    "👋 Welcome to {server}! Please read the rules and enjoy your stay.",
+},  repeatAfterMessages: 5,
 },
 
 // =========================
